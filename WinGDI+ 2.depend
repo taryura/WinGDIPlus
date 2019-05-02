@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1556724476 source:d:\c++ projects\Новая папка\wingdi+ 2\main.cpp
+1556741639 source:d:\c++ projects\Новая папка\wingdi+ 2\main.cpp
 	"FilteredImage.h"
 
-1556711970 d:\c++ projects\Новая папка\wingdi+ 2\include\filteredimage.h
+1556741639 d:\c++ projects\Новая папка\wingdi+ 2\include\filteredimage.h
 	<windows.h>
 	<gdiplus.h>
 	<stdio.h>
 	<iostream>
 
-1556711983 source:d:\c++ projects\Новая папка\wingdi+ 2\src\filteredimage.cpp
+1556741691 source:d:\c++ projects\Новая папка\wingdi+ 2\src\filteredimage.cpp
 	"FilteredImage.h"
 

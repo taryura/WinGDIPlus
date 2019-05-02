@@ -60,6 +60,7 @@ int main()
 
    {
        std::cout << "The images must be of the same resolution " << std::endl;
+       system ("pause");
        return 1;
    }
    //wchar_t* filename = L"images/red.jpg";
@@ -93,13 +94,53 @@ for (int i = 0; i < Red.w; i++)
                std::cout << "\rMerging images... " << progress << "% done. ";
            }
 
+
+            int r = Red.GetPixelValue(i,k);
+            int g = Green.GetPixelValue(i,k);
+            int b = Blue.GetPixelValue(i,k);
+
+
+/*
+            //color correction and contrast
+            int contrast = 0;
+
+            // fct = 1 or 2
+            int fct = 2
+
+            if (r > (g + b)/fct)
+            {
+                r += contrast;
+                if (r > 255)
+                {
+                    r = 255;
+                }
+            }
+
+            if (g > (r + b)/fct)
+            {
+                g += contrast;
+                if (g > 255)
+                {
+                    g = 255;
+                }
+            }
+
+            if (b > (g + r)/fct)
+            {
+                b += contrast;
+                if (b > 255)
+                {
+                    b = 255;
+                }
+            }
+*/
+
             // COLORREF is defined as an unsigned long in Wingdi.h
-            unsigned long gdiColorRef = RGB(Red.GetPixelValue(i,k), Green.GetPixelValue(i,k), Blue.GetPixelValue(i,k));   // Set a GDI COLORREF value.
+            unsigned long gdiColorRef = RGB(r, g, b);   // Set a GDI COLORREF value.
 
             // Set the color object to the COLORREF value.
             gdipColor.SetFromCOLORREF(gdiColorRef);
 
-            //std::cout << "i= " << i << std::endl << << "k= " << k << std::endl;
             mergedBitmap.SetPixel(i, k, gdipColor);
 
        }

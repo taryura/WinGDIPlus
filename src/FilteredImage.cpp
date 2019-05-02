@@ -19,4 +19,19 @@ unsigned int FilteredImage::GetPixelValue (int x, int y)
 
 }
 
+unsigned int FilteredImage::GetPixelValue (int x, int y, int brightness)
+{
+
+    unsigned int a = GetPixelValue(x, y);
+    a += brightness;
+    if (a > 255)
+    {
+        return 255;
+    }
+
+    return a;
+
+
+}
+
 //void FilteredImage::GetPixelValue

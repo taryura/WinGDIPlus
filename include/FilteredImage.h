@@ -14,6 +14,7 @@ class FilteredImage
         Bitmap gpBitmap;
         int w, h;
         unsigned int GetPixelValue (int x, int y);
+        unsigned int GetPixelValue (int x, int y, int brightness);
 
     protected:
         //Color pixelcolor;
